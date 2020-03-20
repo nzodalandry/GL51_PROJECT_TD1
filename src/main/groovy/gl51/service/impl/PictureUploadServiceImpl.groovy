@@ -1,16 +1,13 @@
 package gl51.service.impl
 
-import gl51.data.Picture
-import gl51.service.PictureUploadService
+import gl51.data.Image
+import gl51.service.CloudUploadService
 
-import javax.inject.Inject
-
-class PictureUploadServiceImpl implements PictureUploadService {
-
-    @Inject PictureUploadService pictureUploadService
+class CloudUploadServiceImpl implements CloudUploadService {
 
     @Override
-    void uploadFile() {
-
+    uploadToCloud(Image image_a_importer) {
+        //Stockage dans le cloud
+        return null
     }
 }

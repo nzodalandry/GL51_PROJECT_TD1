@@ -1,12 +1,15 @@
 package gl51.service.impl
 
-import gl51.data.Picture
-import gl51.service.PictureService
+import gl51.data.Image
+import gl51.service.ImageService
 
-@Singleton
-class PictureServiceImpl implements PictureService {
+import javax.inject.Inject
+
+class ImageServiceImpl implements ImageService {
+
     @Override
-    Picture fetchPicture () {
+    Image fetchImage() {
         return null
     }
+
 }
