@@ -1,13 +1,24 @@
 package gl51.service.impl
 
 import gl51.data.Image
+import gl51.data.Picture
 import gl51.service.ImageFiligraneService
+import gl51.service.PictureFiligraneService
 
-class ImageFiligraneServiceImpl implements ImageFiligraneService {
+import javax.inject.Inject
+
+
+class ImageFiligraneServiceImpl implements PictureFiligraneService {
+@Inject
+    PictureFiligraneService service
+    @Override
+    Picture add_filigrane(Picture image_source) {
+        //Ajout du filigrane
+        return null
+    }
 
     @Override
-    Image add_filigrane(Image image_source) {
-        //Ajout du filigrane
+    Picture applyFiligrane() {
         return null
     }
 }
