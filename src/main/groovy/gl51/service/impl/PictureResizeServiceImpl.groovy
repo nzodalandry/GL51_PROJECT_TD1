@@ -1,27 +1,31 @@
 package gl51.service.impl
 
 import gl51.data.Image
+import gl51.data.Picture
 import gl51.service.CloudUploadService
 import gl51.service.ImageFiligraneService
 import gl51.service.ImageResizingService
 import gl51.service.ImageService
-
+import gl51.service.PictureFiligraneService
+import gl51.service.PictureResizeService
+import gl51.service.PictureService
+import gl51.service.PictureUploadService
 import gl51.service.UptdateDataBaseService
 
 import javax.inject.Inject
 
-class ImageResizingServiceImpl implements ImageResizingService {
+class ImageResizingServiceImpl implements PictureResizeService {
     @Inject
-    ImageService pictureService
+    PictureService pictureService
 
     @Inject
-    CloudUploadService cloudUploadService
+    PictureUploadService cloudUploadService
 
     @Inject
     UptdateDataBaseService updateDataDaseService
 
     @Inject
-    ImageFiligraneService pictureFiligraneService
+    PictureFiligraneService pictureFiligraneService
 
     @Override
     Picture resize(Picture pictureSource, int dimensionX, int dimensionY) {
@@ -48,5 +52,10 @@ class ImageResizingServiceImpl implements ImageResizingService {
         //Mise à jour de la base de données
         updateDataDaseService.updateDatabase(newImage.getX(),new_image.getY(),newImage.getName())
 
+    }
+
+    @Override
+    Picture resize() {
+        return null
     }
 }
